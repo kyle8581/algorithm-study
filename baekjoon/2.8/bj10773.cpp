@@ -19,7 +19,7 @@ int main()
             moneySaveStack.pop();
 
         }
-        else // case2: new number
+        else // case2: new number insert
         {
             moneySaveStack.push(saveCur);
             totalSum += saveCur;
