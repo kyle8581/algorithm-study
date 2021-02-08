@@ -13,21 +13,18 @@ int main()
     {
         
         cin >> saveCur;
-        if (saveCur == 0)
+        if (saveCur == 0) // case1: mistake number
         {
+            totalSum -= moneySaveStack.top();
             moneySaveStack.pop();
+
         }
-        else
+        else // case2: new number
         {
             moneySaveStack.push(saveCur);
+            totalSum += saveCur;
         }
     }
-    while(true){
-        if(moneySaveStack.empty()){
-            break;
-        }
-        totalSum += moneySaveStack.top();
-        moneySaveStack.pop();
-    }
+
     cout << totalSum;
 }
